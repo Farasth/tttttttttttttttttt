@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../django"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML&CSS     and JS"
+	}
+}

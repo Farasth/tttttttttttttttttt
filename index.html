@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+     <link rel="stylesheet" href="loder.css">
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+
+    <title>Responsive KLOPTERZ TECHNOLOGIES</title>
+
+ 
+    <style>
+
+
+        .blog-carousel {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 400px;
+        }
+
+        .blog-card {
+            min-width: 100%;
+            padding: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            align-self: flex-start;
+        }
+
+        .read-more:hover {
+            background-color: #2980b9;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-dot.active {
+            background-color: white;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-btn {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 15px;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background-color: white;
+        }
+
+    </style>
+   
+</head>
+<body>
+
+    
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div id="loaderContent" class="loader__content">
+        <div class="loader__shadow"></div>
+        <div class="loader__box"></div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#"><img  src="img/Logo.jpg" alt=""></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                      <span class="logo"><img src="img/Logo.jpg" style=" height: 30px;" alt=""><a href="#">KLOPTERZ TECHNOLOGIES</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                   <li><a href="index.html">Home</a></li>
+            <li><a href="ai.html">AI Solutions</a></li>
+            <li><a href="cloud.html">Cloud Solutions</a></li>
+            <li><a href="ourclients.html">Our Clients</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+            
+      <!-- <header></header> -->
+
+
+       <header class="home">
+        <div class="header__container">
+            <div class="header__content">
+                <h1>KLOPTERZ TECHNOLOGIES </h1>
+                    
+                <h2>Your Cloud Optimization Partner</h2>
+                <p>At  <b>KLOPTERZ,</b> we help small and mid-sized businesses unlock the full potential of their
+          solutions on the cloud platforms. Whether you're new to cloud or looking to optimize your
+          current setup, we provide expert guidance and assistance to ensure your cloud infrastructure
+          is cost-efficient, reliable, secure and high-performing. Our team is dedicated to making cloud adoption easy and seamless, so you can focus on what matters most – growing your business. 
+          <br><br>Ready to optimize your Azure environment? Get in touch today and let’s create a cloud platform that works for you. Our experts are just an email away !
+          <p>If you have any questions, feel free to contact us at <a href="mailto:info@klopterz.in"> info@klopterz.in</a></p>
+          <br><br></p>
+          <div class="icons">
+          <a class="linkedin" href="https://www.linkedin.com/company/klopterz/?viewAsMember=true"><i class="ri-linkedin-box-fill"></i></a>
+          <a class="whatsapp" href=""><i class="ri-whatsapp-fill"></i></a>
+          <a class="instagram" href=""><i class="ri-instagram-fill"></i></a>
+          </div>
+            
+            </div>
+        </div>
+     </header>
+
+
+      <section class="intro">
+      <h2>Vision: Empower businesses through innovative cloud-based automation solutions.</h2><br>
+      <h2>Mission: Deliver scalable, secure, and cost-effective digital transformation tools for SMEs. </h2><br>
+      <h2>Elevate your Business with Cloud Solutions </h2><br>
+      <h2>Simplify IT, Maximize Potential</h2>
+
+
+
+
+      <div class="intro-content">
+        <div class="text">
+         <h3>Intelligent Solutions: AI, Cloud, Mobile.</h3>
+          <p>
+           <b> Innovate with Cloud AI: </b>Transforming Cloud Architecture Solutions
+            In today’s rapidly evolving digital landscape, leveraging the power of Cloud AI is essential for businesses aiming to stay ahead. Our cutting-edge cloud architecture solutions integrate advanced AI technologies to optimize performance, enhance scalability, and drive innovation.
+          </p>
+        </div>
+        <img src="img/p-1.jpeg" alt="Cloud AI Illustration"/>
+      </div>
+    </section>
+
+
+    
+    
+
+
+     <section class="services">
+      <div class="service-block">
+        <img src="img/p-3.jpeg" alt="AI Cloud Solutions" style="height: 20%;padding: 10px;"/>
+       <div class="intro-content">
+        <div class="text">
+          <h3>Transform Your Business with AI Cloud Solutions</h3>
+          <p><b>Operational Excellence : </b> Ensuring efficient operations and continuous improvement. </p>
+          <p><b>Security:</b> Protecting data, systems, and assets while meeting compliance requirements. </p>
+          <p><b>Reliability: </b> Designing systems to recover quickly and operate reliably. </p>
+          <p><b>Performance Efficiency: </b> Using resources efficiently for optimal performance. </p>
+          <p><b>Cost Optimization:</b> Managing costs effectively while delivering value. </p>
+        </div>
+      </section>
+      
+
+
+        <section class="intro">
+      <div class="intro-content">
+        <div class="text">
+         <h3>Our Cloud Services</h3>
+           <p><b>Cloud Migration: </b>Smoothly transition to the cloud. </p>
+          <p><b>Cloud Infrastructure:</b>Build and manage scalable infrastructure. </p>
+          <p><b>Cloud Consulting: </b>  Expert guidance for your cloud journey. </p>
+          <p><b>Cloud Security </b> Safeguard your data with advanced security solutions. </p>
+        </div>
+        <img src="img/p-2 (1).jpeg" alt="Cloud AI Illustration"/>
+      </div>
+    </section>
+
+    <br>
+<section>
+     <div class="Choose">
+        <h1>Why Choose Us?</h1>
+        <div class="blog-slider">
+            <div class="slide-arrow prev">&#10094;</div>
+            <div class="blog-slides">
+                <div class="blog-slide">
+                    <h1>Experienced Team:</h1>
+                <p>Our experts have a proven track record.</p> 
+           
+                </div>
+                <div class="blog-slide">
+                    <h1>Customer-Centric Approach:</h1>
+                    <p>We prioritize your needs.</p>
+                    
+                </div>
+                <div class="blog-slide">
+                   <h1>Innovative Solutions:</h1>
+                   <p>We stay ahead of the curve.</p>
+                </div>
+            </div>
+            <div class="slide-arrow next">&#10095;</div>
+            <div class="slide-nav">
+
+                <span class="slide-dot active"></span>
+                <span class="slide-dot"></span>
+                <span class="slide-dot"></span>
+            </div>
+        </div>
+         <div class="Choose">
+        <h1><div class="Choose">
+        <a href="https://www.linkedin.com/company/klopterz/?viewAsMember=true"><i class="ri-linkedin-box-fill" style="color: #0077B5;"></i><h1>write us at info@klopterz.com </h1></a>
+      </section>
+    
+
+
+
+               
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Azure Blogs</h3>
+                    <p>Your trusted source for the latest Azure cloud computing news, tutorials, and best practices.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/klopterz/?viewAsMember=true"><i class="ri-linkedin-box-fill"></i></a>
+                        <a href="#"><i class="ri-whatsapp-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+            <li><a href="ai.html">AI Solutions</a></li>
+            <li><a href="cloud.html">Cloud Solutions</a></li>
+            <li><a href="ourclients.html">Our Clients</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cloud Adoption</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">AI & ML</a></li>
+                        <li><a href="#">DevOps</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>Stay updated with our latest posts and cloud computing insights.</p>
+                    <div class="search-box">
+                        <input type="email" placeholder="Your email address">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="libs.min.js"></script>
+    
+
+</body>
+</html>
+
+
